@@ -1,0 +1,4 @@
+$ kubectl get pods/deployments/services
+$ kubectl describe pods/deployments/services
+$ kubectl logs <podname>
+
