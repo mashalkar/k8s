@@ -1,0 +1,14 @@
+# Get deployments
+kubectl get deploy
+
+# Set the new image to be deployed
+kubectl set image deployments/<deployment-name> <container=new-image>
+
+# Check rollout history
+kubectl rollout history deploy
+
+# Check rollout status
+kubectl rollout status deploy/<deployment-name>
+
+# Undo rollout / rollback
+kubectl rollout undo deploy/<deployment-name>
