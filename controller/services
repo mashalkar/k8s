@@ -1,0 +1,17 @@
+There are four different types of services:
+
+ClusterIP(default)
+NodePort
+LoadBalancer
+Externalname
+
+
+Commands:
+# Get services 
+kubectl get svc
+
+# Expose the deployment to the network
+kubectl expose deployment web1 --port=80 --type=LoadBalancer
+
+# Create a service with a YAML file
+kubectl apply –f <service.yaml>
