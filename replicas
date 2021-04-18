@@ -1,0 +1,5 @@
+# Scale 
+kubectl scale deploy <deployment-name> --replicas=20
+
+# Autoscaling is possible with the autoscale command
+kubectl autoscale deployment <deployment-name> --min=2 --max=10
