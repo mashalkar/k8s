@@ -1,4 +1,54 @@
+Pod conditions:
+- Pening
+- Running
+- Succeeded
+- Failed
+- Unknown
+----------
+
+Container consditoins:
+- Waiting
+- Running
+- Terminated
+------------
+
+List and gets status of all the pods, deployments and services:
 $ kubectl get pods/deployments/services
+
+Describes or gives details: Look for Events section with below command:
 $ kubectl describe pods/deployments/services
+
 $ kubectl logs <podname>
 
+To quick fix, do:
+$ kubectl edit pod <podname>
+
+===============
+Node monitoring and troubelshooting
+Master node:
+
+$ kubectl get nodes
+$ kubectl get nodes -o=wide
+
+Log files: /var/log/kube-apiserver.log
+           /var/log/kube-scheduler.log
+           /var/log/kube-controller-manager.log
+           
+           
+ Worker Node:
+ Log files: /var/log/kubelet.log
+            /var/log/kube-proxy.log
+            
+=================
+  Minikube:
+  minikube status
+  minikube ip
+  minikube logs
+  minikube ssh
+  minikube version
+  kubectl cluster-info
+  minikube delete
+  brew cask reinstall minikube
+  minikube start
+   
+=================
