@@ -1,0 +1,26 @@
+# Create pod with command:
+$ kubectl run nginx --image=nginx
+
+# Create pod using yaml file:
+$ cat > nginx.yaml << EOF
+apiVersion: v1
+kind: Pod
+metadata:
+        name: myapp-pod
+        labels:
+                app: myapp
+                type: frontend
+        
+spec:
+        containers:
+                - name: myapp-container
+                  image: nginx
+EOF
+--
+
+$ kubectl create -f nginx.yaml
+
+If you wish to make changes to pod then edit the yaml file and use apply:
+$ kubectl apply -f nginx.yaml
+
+
