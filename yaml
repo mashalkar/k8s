@@ -1,0 +1,12 @@
+apiVersion: v1      <-- Kubernetes api version of below object
+kind: Pod           <-- This is kind of object in kubernetes. There are many other objects like deployment, service, deamonset, etc. Complete list and its version can be seen with the help of kubectl api-resources and then describing it to check the VERSION.
+metadata:           <-- This is metadata part. This holds name and labels.
+  name: myapp-pod
+  labels:           <--  holds dictionary key value type info
+    app: myapp
+    type: front-end
+    
+spec:               <-- Specification part. This is dictonary.
+  containers:
+    -name: my-ngnix-contianer
+     image: nginx
