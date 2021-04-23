@@ -1,0 +1,47 @@
+apiVersion: apps/v1             <-- ReplicaSet version is inside apps/v1
+kind: ReplicaSet
+
+
+metadata:                         <-- Same apiVersion, kind, metadata and spec section
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+
+
+spec:                         <-- Here the spec has 3 parts. Template, replicas, and selector. 
+  template:                    <-- This is the template for pods. This is the exact same part from pods yaml except the api and kind.
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+      spec:
+        containers:
+          - name: nginx-container
+            image: nginx
+  replicas: 3                <-- This defines the number of replicas needed
+  selector:                  <-- This performs the selection of pods using the labels
+    matchLabels:
+    type: front-end
+    
+    
+# To create the replica set using above yaml file run below command:
+ $ kubectl create -f replicaset.yaml
+ 
+ $ kubectl get replicaset or just rs
+ 
+ $ kubectl get pods    <-- check the pods created using deployed replica set
+ 
+# Scaling the pods in replica set: 
+1) Edit the yaml file and then do apply:
+$ kubectl apply -f replicaset.yaml
+
+2) use the kubectl scale command:
+$ kubectl scale --replicas=6 -f replicaset.yaml
+or 
+$ kubectl scale --replicas=6 replicaset myapp-replicaset
+
+3) Use the kubectl edit command to edit the replicaset
+$ kubectl edit rs myapp-replicaset
+
