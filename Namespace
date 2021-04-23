@@ -1,0 +1,44 @@
+How to create new namespace:
+
+Using yaml file:
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+$ kubectl create -f namespace-dev.yaml
+
+Using command line:
+$ kubectl create namespace dev
+
+Change the default namespace
+$ kubectl config set-context `kubectl config current-context` --namespace=dev
+
+View objects from other namespaces:
+$ kubectl get pods --namespace=dev
+
+To view all the objects from all the namespaces:
+$ kubectl get pods --all-namespaces
+
+
+
+Adding namespace quota:
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: dev
+  
+spec:
+  hard:
+    pods: "10"
+    requests.cpu: "4"
+    requests.memory: 5Hi
+    limits.cpu: "10"
+    limits.memory: 10Gi
+---
+$ kubectl create -f compute-quota.yaml
+
+
