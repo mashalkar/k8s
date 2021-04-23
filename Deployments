@@ -17,8 +17,13 @@ $ kubectl delete deployment myweb
 
 
 
-Deploying application with kubernetes manifest YAML file.
+# Deploying application with kubernetes manifest YAML file.
 Get a) ngnix-deployment.yaml and b) nginix-service.yaml files from https://gitlab.com/nanuchi/youtube-tutorial-series/-/tree/master/kubernetes-configuration-file-explained
+
+
+# How to generate your own yaml file in a easy way: lets say you know the deployment name, no of replicas, and image to use.
+$ kubectl create deployment my-ngnix --image=nginx --replica=3 --dry-run=client -o yaml > my-nginix-deployment.yaml
+
 
 $ kubectl apply -f nginix-deployment.yaml
 $ kubectl apply -f nginix-service.yaml
