@@ -1,0 +1,24 @@
+POD 80(target port)  ->   Service 80(port)  ->  Node 38008node port)
+
+YAML file:
+
+apiVersion: v1
+kind: service
+metadata:
+  name: myapp-service
+
+sepc:
+  type: NodePort
+  ports:
+   - targetPort: 80
+     port: 80
+     nodePort: 30008
+  selector:
+   app: myapp
+   type: front-end
+   
+   
+$ kubectl create -f myapp-service.yaml
+$ kubectl get services
+
+
