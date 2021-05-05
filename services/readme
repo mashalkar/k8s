@@ -1,0 +1,6 @@
+Types of services:
+
+1) NodePort   -   Exposes pod port and associate it with nodes port.
+2) ClusterIP - Service creates virtual IP 
+3) LoadBalancer  -   Loadbalancer in cloud 
+
