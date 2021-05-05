@@ -4,3 +4,7 @@ Types of services:
 2) ClusterIP - Service creates virtual IP 
 3) LoadBalancer  -   Loadbalancer in cloud 
 
+
+
+Create servcie defination file with command line
+# kubectl create service nodeport webapp-service --tcp=8080:8080 --node-port=30080 --dry-run=client -o yaml > service-definition-1.yaml
