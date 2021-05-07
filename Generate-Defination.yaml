@@ -1,0 +1,13 @@
+POD: 
+$ kubectl run nginx --image=nginx  --dry-run=client -o yaml
+
+Deployment:
+$ kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+
+Deployments-with-Replicas:
+$ kubectl create deployment nginx --image=nginx --replicas=4 --dry-run=client -o yaml
+
+Service:
+$ kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
+$ kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml
+$ kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml
