@@ -7,7 +7,6 @@ $ kubectl label nodes node-1 size=Large
 
 <details>
 <summary> xml definaiton </summary>
-<p>
 apiVersion: v1
 kind: Pod
 metadata:
@@ -18,7 +17,6 @@ spec:
    image: data-processor
  nodeSelector:
   size: Large
-</p>
 </details>
  
 # Node affiniti and anti-affinity
