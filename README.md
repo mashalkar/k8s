@@ -7,8 +7,8 @@ $ kubectl label nodes node-1 size=Large
 
 <details>
 <summary> xml definaiton </summary>
-apiVersion: v1
-kind: Pod
+apiVersion: v1 \n
+kind: Pod \n
 metadata:
  name: myapp-pod
 spec:
