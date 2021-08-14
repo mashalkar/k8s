@@ -1,0 +1,6 @@
+Dowload etcd binary from github and extract
+run the server with ./etcd
+It runs and listens on 2379 port by default.
+To connect via client use tool etcdctl 
+./etcdctl set key1 value1
+./etcdctl get key1

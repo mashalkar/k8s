@@ -1,0 +1,21 @@
+Simple 1 Master 2 Node deployment:
+Pre-requisute: 1) 2 VMs with 2-4 GB memory and 2 CPUs. Installed with RHEL/Centos 7.x
+
+
+
+
+
+
+
+
+
+Other deployment links:
+https://github.com/kelseyhightower/kubernetes-the-hard-way
+https://www.youtube.com/watch?v=XJufs3ZZBVY
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+https://www.youtube.com/watch?v=E3h8_MJmkVU
+https://github.com/tunetolinux/Kubernetes-Installation/wiki
+
+
+https://gist.github.com/mjhea0/b08ed217144ad307085a05450f3ac6be
+https://github.com/bennzhang/kubernetes-install-on-centos7
