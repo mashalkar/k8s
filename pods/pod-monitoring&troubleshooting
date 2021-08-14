@@ -1,0 +1,15 @@
+# Get all list of pods:
+kubectl get pods
+
+# Check the pod status:
+kubectl get pod mem-demo 
+
+# See pod details:
+kubectl get pod mem-demo --output=yaml
+
+# Descrive pod:
+kubectl describe pod mem-demo
+
+# See pod metrics
+kubectl top pod mem-demo 
+
