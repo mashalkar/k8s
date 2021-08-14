@@ -1,3 +1,5 @@
+
+### Memory Limit ###
 apiVersion: v1
 kind: Pod
 metadata:
@@ -16,3 +18,24 @@ spec:
     args: ["--vm", "1", "--vm-bytes", "150M", "--vm-hang", "1"]
     
     
+### CPU Limit ###
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-demo-2
+  namespace: cpu-example
+spec:
+  containers:
+  - name: cpu-demo-ctr-2
+    image: vish/stress
+    resources:
+      limits:
+        cpu: "100"
+      requests:
+        cpu: "100"
+    args:
+    - -cpus
+    - "2"
+    
+    
+###
