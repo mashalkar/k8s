@@ -4,3 +4,10 @@ Burstable
 BestEffort
 
 
+Pod lifecycle phases
+A pod status tells us where the pod is in its lifecycle. It is meant to give you an idea not for certain, therefore It is good practice to debug if pod does not come up cleanly. The five phases of a pod lifecycle are:
+Pending. The pod is accepted, but at least one container image has not been created.
+Running. The pod is bound to a node, and all containers are created. One container is running or in the process of starting or restarting.
+Succeeded. All containers in the pod successfully terminated and will not restart.
+Failed. All containers are terminated, with at least one container failing. The failed container exited with non-zero status.
+Unknown. The state of the pod couldn’t be obtained.
