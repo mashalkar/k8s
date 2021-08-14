@@ -39,5 +39,5 @@ There are different services running on both Control plane and worker nodes.
 
 
 
-
-
+# Resources
+[Kube in nutshell](https://www.bmc.com/blogs/what-is-kubernetes/)\
