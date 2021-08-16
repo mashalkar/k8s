@@ -36,6 +36,7 @@ spec:                         <-- Here the spec has 3 parts. Template, replicas,
 # Scaling the pods in replica set: 
 1) Edit the yaml file and then do apply:
 $ kubectl apply -f replicaset.yaml
+$ kubectl replace -f replicaset.yaml
 
 2) use the kubectl scale command:
 $ kubectl scale --replicas=6 -f replicaset.yaml
