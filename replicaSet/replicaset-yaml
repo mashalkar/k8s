@@ -38,6 +38,7 @@ spec:                         <-- Here the spec has 3 parts. Template, replicas,
 $ kubectl apply -f replicaset.yaml
 $ kubectl replace -f replicaset.yaml
 
+Below commands does not make changes to configuration file thus this is not permanent solution. 
 2) use the kubectl scale command:
 $ kubectl scale --replicas=6 -f replicaset.yaml
 or 
