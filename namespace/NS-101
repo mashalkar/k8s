@@ -1,0 +1,14 @@
+# Creating new namespace
+
+$ cat dev-namespace.yaml
+--
+apiVersion: v1
+Kind: Namespace
+metadata:
+ name: dev
+--
+$ kubectl create -f dev-namespace.yaml
+
+# Just using CLI
+$ kubectl create namespace dev
+
