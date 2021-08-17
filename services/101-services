@@ -10,5 +10,9 @@ Types of services:
 
 
 
-Create servcie defination file with command line
-# kubectl create service nodeport webapp-service --tcp=8080:8080 --node-port=30080 --dry-run=client -o yaml > service-definition-1.yaml
+# Create servcie defination file with command line
+$ kubectl create service nodeport webapp-service --tcp=8080:8080 --node-port=30080 --dry-run=client -o yaml > service-definition-1.yaml
+
+
+# Imparative way to exprt application to port:
+$ kubectl expose pod redis --port=6379 --name redis-service
