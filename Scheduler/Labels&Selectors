@@ -1,0 +1,11 @@
+
+# To see all pods and its labels:
+$ kubectl get pods --show-labels
+
+# To see pods with particular label
+$ kubectl get pods -l env=dev
+
+# get pod counts
+$ kubectl get pods -l env=dev --no-headers | wc -l
+
+
