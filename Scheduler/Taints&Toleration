@@ -1,0 +1,12 @@
+# check taints on nodes
+$ kubectl describe node node01 | grep -i taint
+
+# Add taints to the node
+$ kubectl taint node node01 spary=mortien:NoSchedule
+
+# Check the available options for Tolerations
+$ kubectl explain pod --recursive | grep -A5 toleration
+
+# Remove taint from node: Just add "-" at the end of exiting taint. 
+$ kubectl taint node node01 spary=mortien:NoSchedule-
+
