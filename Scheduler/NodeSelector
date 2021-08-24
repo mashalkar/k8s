@@ -1,0 +1,22 @@
+# To schedule a pod on particular node, you can define the node selector in the pod defination:
+cat pod.yaml
+~~~
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  
+spec:
+  containers:
+  - name: myapp-container
+    image: nginx
+    
+  nodeSeletor:
+    size: Large
+ ~~~   
+    
+ # For pod to go to selected node, the node should be labeled with size=Large
+ $ kubectl label node node01 size=Large
+ 
+ # To remove the label. Use - in front of label. 
+ $ kubectl label node node01 size-
