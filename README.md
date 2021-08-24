@@ -13,3 +13,6 @@ xml definaiton
  
 # Node affiniti and anti-affinity
 $ 
+
+
+	$ kubectl explain pod --recursive | also grep can be used. 
