@@ -1,0 +1,6 @@
+# By user:
+$ kubectl auth can-i create deployment
+
+# By admin
+$ kubectl auth can-i delete deployment --as dev-user
+
