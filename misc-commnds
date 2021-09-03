@@ -1,0 +1,4 @@
+# List full resources: Wihin namespace and out of namespace scope. 
+$ kubectl api-resources --namespaced=true
+$ kubectl api-resources --namespaced=false
+
